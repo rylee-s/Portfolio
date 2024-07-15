@@ -19,6 +19,7 @@ export interface Position {
     end: string;
     duration: string;
   };
+  skills: SkillCategory[];
 }
 
 export interface Education {
@@ -54,6 +55,8 @@ export interface Project {
 export interface Skill {
   label: string;
   years: number;
+  months: number;
+  duration: string;
   level: number;
 }
 

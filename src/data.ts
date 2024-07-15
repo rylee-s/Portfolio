@@ -1,8 +1,9 @@
 import {
+  Position,
   Response,
+  SkillCategory,
 } from "./components/EmploymentTree/expierience.types";
 import data from "./data.json" assert { type: "json" };
-
 
 export const getData = async () => {
   return cleanData(data as Response);
@@ -10,6 +11,7 @@ export const getData = async () => {
 
 // clean data to add duration to each company and position
 const cleanData = (data: Response) => {
+  let skills = [] as SkillCategory[];
   const experience = data.experience;
   experience.map((company) => {
     // get the lowest start date and highest end date
@@ -23,13 +25,17 @@ const cleanData = (data: Response) => {
     );
     const compEndDate = new Date(
       Math.max(
-        ...company.positions.map((position) =>
-          new Date(position.endDate).getTime(),
-        ),
+        ...company.positions.map((position) => {
+          const endDate =
+            (position.endDate != "Present" && position.endDate) ||
+            new Date().toISOString();
+          return new Date(endDate).getTime();
+        }),
       ),
     );
 
-    company.duration = duration(compStartDate, compEndDate);
+    const { years, months } = duration(compStartDate, compEndDate);
+    company.duration = formatDuration(years, months);
 
     company.positions.map((position) => {
       // format date to Month, Year
@@ -38,21 +44,31 @@ const cleanData = (data: Response) => {
         year: "numeric",
       });
 
-      const endDate = new Date(position.endDate).toLocaleString("en-US", {
+      let endDate = new Date(position.endDate).toLocaleString("en-US", {
         month: "long",
         year: "numeric",
       });
+      if (endDate === "Invalid Date") {
+        position.endDate = new Date().toISOString();
+        endDate = "Present";
+      }
       position.dates = {
         start: startDate,
         end: endDate,
         duration: "",
       };
-      position.dates.duration = duration(
+      // Combine skills from this position with the global skills array. Duplicates should have their durations added.
+
+      const { years, months } = duration(
         new Date(position.startDate),
         new Date(position.endDate),
       );
+      position.dates.duration = formatDuration(years, months);
+      position.endDate = endDate;
+      skills = updateSkills(skills, position);
     });
   });
+  data.skills = skills;
   return data;
 };
 
@@ -70,11 +86,71 @@ const formatDuration = (years: number, months: number) => {
 const duration = (startDate: Date, endDate: Date) => {
   let years = endDate.getFullYear() - startDate.getFullYear();
   let months = endDate.getMonth() - startDate.getMonth();
-  months ++
+  months++;
 
   if (months < 0) {
     years--;
     months += 12;
   }
-  return formatDuration(years, months);
+  return { years: years, months: months };
+};
+
+const updateSkills = (globalSkills: SkillCategory[], position: Position) => {
+  position.skills &&
+    position.skills.map((skillCategory) => {
+      console.log(position);
+      const { years, months } = duration(
+        new Date(position.startDate),
+        position.endDate == "Present" ? new Date() : new Date(position.endDate),
+      );
+      // add new skill category if it doesn't exist
+      if (
+        !globalSkills.find(
+          (skill) => skill.categoryLabel === skillCategory.categoryLabel,
+        ) &&
+        skillCategory.categoryLabel !== ""
+      ) {
+        globalSkills.push({
+          categoryLabel: skillCategory.categoryLabel,
+          skills: [],
+        });
+      }
+      const globalSkillCategory = globalSkills.find(
+        (skill) => skill.categoryLabel === skillCategory.categoryLabel,
+      );
+      // take each skill in the category
+      skillCategory.skills.map((skill) => {
+        console.log("skill", skill);
+
+        // if the skill doesn't exist, add it to the global skills array
+        if (!globalSkillCategory?.skills.find((s) => s.label === skill.label)) {
+          console.log("globalSkillCategory", globalSkillCategory);
+          console.log("years", years);
+          console.log("months", months);
+          globalSkillCategory?.skills.push({
+            label: skill.label,
+            years,
+            months,
+            duration: "",
+            level: skill.level,
+          });
+        } else {
+          // if the skill does exist, update the duration
+          const globalSkill = globalSkillCategory.skills.find(
+            (s) => s.label === skill.label,
+          );
+          console.log("globalSkill", globalSkill);
+          globalSkill!.years += years;
+          globalSkill!.months += months;
+        }
+      });
+    });
+
+  // call duration function to update the duration of each skill
+  globalSkills.map((skillCategory) => {
+    skillCategory.skills.map((skill) => {
+      skill.duration = formatDuration(skill.years, skill.months);
+    });
+  });
+  return globalSkills;
 };

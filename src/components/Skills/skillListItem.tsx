@@ -29,7 +29,7 @@ export default function SkillListItem({
       </div>
       <div className="flex flex-row gap-x-2">
         <ClockIcon className="my-auto" />
-        <p className="my-auto">{skill.years} Years</p>
+        <p className="my-auto">{skill.duration}</p>
       </div>
     </li>
   );
