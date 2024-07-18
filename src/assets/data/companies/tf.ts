@@ -18,10 +18,6 @@ const company: Company = {
           level: 90,
         },
         {
-          label: "TypeScript",
-          level: 91,
-        },
-        {
           label: "SQL",
           level: 89,
         },
@@ -43,15 +39,7 @@ const company: Company = {
           level: 92,
         },
         {
-          label: "Express JS",
-          level: 98,
-        },
-        {
           label: "Nginx",
-          level: 85,
-        },
-        {
-          label: "Electron",
           level: 85,
         },
       ],
@@ -67,30 +55,42 @@ const company: Company = {
           label: "Relational Databases",
           level: 89,
         },
+        {
+          label: "Redis",
+          level: 85,
+        },
       ],
     },
     {
       categoryLabel: "Cloud Services",
       skills: [
         {
-          label: "Azure Functions",
-          level: 89,
+          label: "AWS",
+          level: 94,
         },
         {
-          label: "Azure App Service",
-          level: 97,
+          label: "AWS S3",
+          level: 94,
         },
         {
-          label: "Azure Application Insights",
-          level: 92,
+          label: "AWS RDS",
+          level: 94,
         },
         {
-          label: "Azure",
-          level: 92,
+          label: "AWS EC2",
+          level: 94,
         },
         {
-          label: "Azure Cosmos DB",
-          level: 85,
+          label: "Github",
+          level: 94,
+        },
+        {
+          label: "AWS Quicksight",
+          level: 94,
+        },
+        {
+          label: "DataDog",
+          level: 94,
         },
       ],
     },
@@ -136,20 +136,8 @@ const company: Company = {
           categoryLabel: "Languages",
           skills: [
             {
-              label: "Ruby",
-              level: 90,
-            },
-            {
-              label: "JavaScript",
-              level: 90,
-            },
-            {
               label: "TypeScript",
               level: 91,
-            },
-            {
-              label: "SQL",
-              level: 89,
             },
           ],
         },
@@ -157,87 +145,12 @@ const company: Company = {
           categoryLabel: "Packages & Frameworks",
           skills: [
             {
-              label: "Ruby on Rails",
-              level: 93,
-            },
-            {
-              label: "React",
-              level: 79,
-            },
-            {
-              label: "Node JS",
-              level: 92,
-            },
-            {
               label: "Express JS",
               level: 98,
             },
             {
-              label: "Nginx",
-              level: 85,
-            },
-            {
               label: "Electron",
               level: 85,
-            },
-          ],
-        },
-        {
-          categoryLabel: "Databases",
-          skills: [
-            {
-              label: "MYSql",
-              level: 95,
-            },
-            {
-              label: "Relational Databases",
-              level: 89,
-            },
-          ],
-        },
-        {
-          categoryLabel: "Cloud Services",
-          skills: [
-            {
-              label: "Azure Functions",
-              level: 89,
-            },
-            {
-              label: "Azure App Service",
-              level: 97,
-            },
-            {
-              label: "Azure Application Insights",
-              level: 92,
-            },
-            {
-              label: "Azure",
-              level: 92,
-            },
-            {
-              label: "Azure Cosmos DB",
-              level: 85,
-            },
-          ],
-        },
-        {
-          categoryLabel: "Tools & Concepts",
-          skills: [
-            {
-              label: "Git",
-              level: 94,
-            },
-            {
-              label: "Performance Monitoring and Optimization",
-              level: 90,
-            },
-            {
-              label: "Agile Development",
-              level: 87,
-            },
-            {
-              label: "MVC (Model, View, Controller)",
-              level: 92,
             },
           ],
         },

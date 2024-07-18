@@ -69,7 +69,7 @@ const company: Company = {
               level: 95,
             },
             {
-              label: "Reational Databases",
+              label: "Relational Databases",
               level: 89,
             },
             {

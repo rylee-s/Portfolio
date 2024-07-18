@@ -35,6 +35,53 @@ const company: Company = {
             },
           ],
         },
+        {
+          categoryLabel: "Packages & Frameworks",
+          skills: [
+            {
+              label: "Selenium",
+              level: 90,
+            },
+            {
+              label: "Node JS",
+              level: 90,
+            },
+          ],
+        },
+        {
+          categoryLabel: "Databases",
+          skills: [
+            {
+              label: "Microsoft SQL Server",
+              level: 90,
+            },
+            {
+              label: "Relational Databases",
+              level: 91,
+            },
+          ],
+        },
+        {
+          categoryLabel: "Tools & Concepts",
+          skills: [
+            {
+              label: "Git",
+              level: 90,
+            },
+            {
+              label: "Agile Development",
+              level: 90,
+            },
+            {
+              label: "Test Automation",
+              level: 90,
+            },
+            {
+              label: "Manual Testing",
+              level: 90,
+            },
+          ],
+        },
       ],
     },
   ],
