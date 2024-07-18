@@ -1,5 +1,5 @@
 import CompanyCard from "./companyCard";
-import { Company } from "../../Data/types";
+import { Company } from "../../assets/data/types";
 
 function EmploymentTree({ companies }: { companies: Company[] }) {
   return (

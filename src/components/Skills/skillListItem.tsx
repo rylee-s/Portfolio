@@ -1,4 +1,4 @@
-import { Skill } from "../../Data/types";
+import { Skill } from "../../assets/data/types";
 import { useState, useEffect } from "react";
 import { ClockIcon } from "../Global/Icons";
 export default function SkillListItem({

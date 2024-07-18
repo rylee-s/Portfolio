@@ -3,7 +3,7 @@ import WeddingLogo from "../../assets/wedding-site-logo.avif";
 import Portfolio from "../../assets/portfolio-site.avif";
 import Crowdle from "../../assets/crowdle-logo.avif";
 
-import { Project } from "../../Data/types";
+import { Project } from "../../assets/data/types";
 import { NewWindowIcon } from "../Global/Icons";
 import { Item } from "../Global/Tiles";
 import { log } from "../Global/Event";

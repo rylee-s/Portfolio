@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { Project } from "../../Data/types";
+import { Project } from "../../assets/data/types";
 import { Section } from "../Global/Tiles";
 
 export default function Projects({ projects }: { projects: Project[] }) {

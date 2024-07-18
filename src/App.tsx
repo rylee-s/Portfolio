@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
 import { getData } from "./data";
-import { Response } from "./Data/types";
+import { Response } from "./assets/data/types";
 import EmploymentTree from "./components/EmploymentTree";
 import Education from "./components/Education";
 import Skills from "./components/Skills";

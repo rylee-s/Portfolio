@@ -1,6 +1,6 @@
 import { CalendarHeartIcon, ClockIcon } from "../Global/Icons";
 import { Item } from "../Global/Tiles";
-import { Position } from "../../Data/types";
+import { Position } from "../../assets/data/types";
 
 export default function PositionSection({ position }: { position: Position }) {
   return (

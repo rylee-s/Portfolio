@@ -5,7 +5,7 @@ import {
   NewWindowIcon,
 } from "../Global/Icons";
 import { Section } from "../Global/Tiles";
-import { Company } from "../../Data/types";
+import { Company } from "../../assets/data/types";
 import PositionSection from "./positionSection";
 
 export default function CompanyCard({ company }: { company: Company }) {

@@ -1,11 +1,11 @@
 import { ResumeData } from "./types";
-import education from "./Education";
-import projects from "./Projects";
-import Trihydro from "./Companies/Trihydro";
-import tf from "./Companies/TF";
-import aab from "./Companies/AAB";
+import education from "./education";
+import projects from "./projects";
+import triH from "./companies/trihy";
+import tf from "./companies/tf";
+import aab from "./companies/aab";
 
-const experience = [Trihydro, tf, aab];
+const experience = [triH, tf, aab];
 
 const data: ResumeData = {
   experience,

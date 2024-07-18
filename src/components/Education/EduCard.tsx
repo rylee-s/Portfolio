@@ -2,7 +2,7 @@ import awsCPLogo from "../../assets/aws-certified-cloud-practitioner.avif";
 import gaLogo from "../../assets/ga_Logo.avif";
 import payrollLogo from "../../assets/payrollorg-logo.avif";
 import csuLogo from "../../assets/csu-global-logo.avif";
-import { Education } from "../../Data/types";
+import { Education } from "../../assets/data/types";
 import { NewWindowIcon } from "../Global/Icons";
 
 export default function EduCard({ education }: { education: Education }) {

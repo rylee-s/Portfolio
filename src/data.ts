@@ -1,5 +1,5 @@
-import { ResumeData, SkillCategory } from "./Data/types";
-import data from "./Data/Data";
+import { ResumeData, SkillCategory } from "./assets/data/types";
+import data from "./assets/data/data";
 
 export const getData = async () => {
   return cleanData(data);
