@@ -51,9 +51,13 @@ export interface Project {
 export interface Skill {
   label: string;
   level: number;
-  years?: number;
-  months?: number;
-  duration?: string;
+  skillDuration?: SkillDuration;
+}
+
+export interface SkillDuration {
+  years: number;
+  months: number;
+  duration: string;
 }
 
 export interface SkillCategory {

@@ -123,7 +123,6 @@ const updateSkills = (
   endDate: Date,
 ) => {
   newSkills.map((skillCategory) => {
-    console.log("skillCategory", skillCategory);
     const { years, months } = duration(startDate, endDate);
     // add new skill category if it doesn't exist
     if (
@@ -142,28 +141,25 @@ const updateSkills = (
     );
     // take each skill in the category
     skillCategory.skills.map((skill) => {
-      console.log("skill", skill);
-
       // if the skill doesn't exist, add it to the global skills array
       if (!globalSkillCategory?.skills.find((s) => s.label === skill.label)) {
-        console.log("globalSkillCategory", globalSkillCategory);
-        console.log("years", years);
-        console.log("months", months);
         globalSkillCategory?.skills.push({
           label: skill.label,
-          years,
-          months,
-          duration: "",
           level: skill.level,
+          skillDuration: {
+            years: years,
+            months: months,
+            duration: formatDuration(years, months),
+          },
         });
       } else {
         // if the skill does exist, update the duration
         const globalSkill = globalSkillCategory.skills.find(
           (s) => s.label === skill.label,
         );
-        if (globalSkill && globalSkill.years && globalSkill.months) {
-          globalSkill.years += years;
-          globalSkill.months += months;
+        if (globalSkill?.skillDuration) {
+          globalSkill.skillDuration.years += years;
+          globalSkill.skillDuration.months += months;
         }
       }
     });
@@ -172,8 +168,11 @@ const updateSkills = (
   // call duration function to update the duration of each skill
   globalSkills.map((skillCategory) => {
     skillCategory.skills.map((skill) => {
-      if (skill.years && skill.months) {
-        skill.duration = formatDuration(skill.years, skill.months);
+      if (skill.skillDuration) {
+        skill.skillDuration.duration = formatDuration(
+          skill.skillDuration.years,
+          skill.skillDuration.months,
+        );
       }
     });
   });

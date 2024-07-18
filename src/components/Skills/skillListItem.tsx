@@ -27,10 +27,12 @@ export default function SkillListItem({
           style={{ width: `${width}%` }}
         ></div>
       </div>
-      <div className="flex flex-row gap-x-2">
-        <ClockIcon className="my-auto" />
-        <p className="my-auto">{skill.duration}</p>
-      </div>
+      {skill.skillDuration && (
+        <div className="flex flex-row gap-x-2">
+          <ClockIcon className="my-auto" />
+          <p className="my-auto">{skill.skillDuration.duration}</p>
+        </div>
+      )}
     </li>
   );
 }
