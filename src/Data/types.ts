@@ -1,25 +1,26 @@
 export interface Company {
   name: string;
   location: string;
-  description?: string;
-  duration: string;
-  positions: Position[];
-  technologies: string[];
   link: string;
+  description?: string;
+  skills?: SkillCategory[] | null;
+  positions: Position[];
+  duration?: string;
+  technologies?: string[];
 }
 
 export interface Position {
   title: string;
   description: string;
   startDate: string;
-  endDate: string;
+  endDate?: string;
   bullets: string[];
-  dates: {
+  dates?: {
     start: string;
     end: string;
     duration: string;
   };
-  skills: SkillCategory[];
+  skills?: SkillCategory[] | null;
 }
 
 export interface Education {
@@ -32,32 +33,27 @@ export interface Education {
   linkText?: string;
 }
 
+export interface Link {
+  link: string;
+  alt: string;
+}
+
 export interface Project {
   name: string;
   subtitle: string;
   description: string;
   link: string;
   img: string;
-  badges?: [
-    {
-      link: string;
-      alt: string;
-    },
-  ];
-  technology?: [
-    {
-      link: string;
-      alt: string;
-    },
-  ];
+  badges?: Link[];
+  technology?: Link[];
 }
 
 export interface Skill {
   label: string;
-  years: number;
-  months: number;
-  duration: string;
   level: number;
+  years?: number;
+  months?: number;
+  duration?: string;
 }
 
 export interface SkillCategory {
@@ -77,7 +73,7 @@ export interface General {
   };
 }
 
-export interface Response {
+export interface ResumeData {
   experience: Company[];
   education: Education[];
   skills: SkillCategory[];

@@ -1,4 +1,4 @@
-import { SkillCategory } from "../EmploymentTree/expierience.types";
+import { SkillCategory } from "../../Data/types";
 import { useState } from "react";
 import SkillListItem from "./skillListItem";
 import { log } from "../Global/Event";

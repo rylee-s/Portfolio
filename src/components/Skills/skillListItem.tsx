@@ -1,4 +1,4 @@
-import { Skill } from "../EmploymentTree/expierience.types";
+import { Skill } from "../../Data/types";
 import { useState, useEffect } from "react";
 import { ClockIcon } from "../Global/Icons";
 export default function SkillListItem({

@@ -1,5 +1,5 @@
 import CompanyCard from "./companyCard";
-import { Company } from "./expierience.types";
+import { Company } from "../../Data/types";
 
 function EmploymentTree({ companies }: { companies: Company[] }) {
   return (

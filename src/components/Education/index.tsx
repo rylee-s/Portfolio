@@ -1,6 +1,6 @@
 import EduCard from "./EduCard";
 import { Section, Item } from "../Global/Tiles";
-import { Education } from "../EmploymentTree/expierience.types";
+import { Education } from "../../Data/types";
 
 export default function Certifications({
   education,
