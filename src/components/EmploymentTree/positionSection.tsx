@@ -1,6 +1,7 @@
-import { CalendarHeartIcon, ClockIcon } from "../Global/Icons";
+import { CalendarHeartIcon } from "../Global/Icon";
 import { Item } from "../Global/Tiles";
-import { Position } from "../../assets/data/types";
+import { Position } from "../../types/ResumeData";
+import { Duration } from "../Global/Label";
 
 export default function PositionSection({ position }: { position: Position }) {
   return (
@@ -13,16 +14,13 @@ export default function PositionSection({ position }: { position: Position }) {
             </span>
             <br />
             {position.dates && (
-              <>
+              <div className="font-medium">
                 <span className="flex font-medium text-slate-600 transition duration-300 ease-in-out hover:text-slate-700 focus:text-slate-800">
                   <CalendarHeartIcon className="my-auto mr-1" />
                   {position.dates.start} - {position.dates.end}
                 </span>
-                <span className="flex font-medium text-slate-600 transition duration-300 ease-in-out hover:text-slate-700 focus:text-slate-800">
-                  <ClockIcon className="my-auto mr-1" />
-                  {position.dates.duration}
-                </span>
-              </>
+                <Duration duration={position.dates.duration} />
+              </div>
             )}
           </div>
           {position.description && (

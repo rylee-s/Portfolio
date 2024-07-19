@@ -1,4 +1,4 @@
-import { ResumeData } from "./types";
+import { ResumeData } from "../../types/ResumeData";
 import education from "./education";
 import projects from "./projects";
 import triH from "./companies/trihy";

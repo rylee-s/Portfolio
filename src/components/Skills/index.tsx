@@ -1,4 +1,4 @@
-import { SkillCategory } from "../../assets/data/types";
+import { SkillCategory } from "../../types/ResumeData";
 import { useState } from "react";
 import SkillListItem from "./skillListItem";
 import { log } from "../Global/Event";

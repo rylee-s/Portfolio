@@ -1,6 +1,6 @@
-import { Skill } from "../../assets/data/types";
+import { Skill } from "../../types/ResumeData";
 import { useState, useEffect } from "react";
-import { ClockIcon } from "../Global/Icons";
+import { Duration } from "../Global/Label";
 export default function SkillListItem({
   skill,
   index,
@@ -23,14 +23,13 @@ export default function SkillListItem({
       <div className="font-bold">{skill.label}</div>
       <div className="my-auto mb-3 h-6 w-full rounded-lg bg-neutral-300">
         <div
-          className="h-6 rounded-lg bg-blue-600  text-center align-middle  delay-150 duration-1000"
+          className="h-6 rounded-lg bg-blue-600 text-center align-middle delay-150 duration-1000"
           style={{ width: `${width}%` }}
         ></div>
       </div>
       {skill.skillDuration && (
         <div className="flex flex-row gap-x-2">
-          <ClockIcon className="my-auto" />
-          <p className="my-auto">{skill.skillDuration.duration}</p>
+          <Duration duration={skill.skillDuration.duration} />
         </div>
       )}
     </li>

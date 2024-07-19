@@ -3,16 +3,16 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
 import { getData } from "./data";
-import { Response } from "./assets/data/types";
 import EmploymentTree from "./components/EmploymentTree";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Tabs from "./components/Global/Tabs";
 import Loading from "./components/Global/Loading";
 import Projects from "./components/Projects";
+import { ResumeData } from "./types/ResumeData";
 
 function App() {
-  const [data, setData] = useState<Response>();
+  const [data, setData] = useState<ResumeData | null>(null);
 
   useEffect(() => {
     getData().then((res) => {

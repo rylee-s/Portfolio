@@ -7,7 +7,7 @@ export default function Typewriter({ words }: { words: string[] }) {
   useEffect(() => {
     const currentWordToType = words[currentWordIndex];
     let currentIndex = 0;
-    let timeout: number;
+    let timeout: NodeJS.Timeout;
 
     const typeNextCharacter = () => {
       if (currentIndex <= currentWordToType.length) {

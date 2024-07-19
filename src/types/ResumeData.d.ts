@@ -38,6 +38,16 @@ export interface Link {
   alt: string;
 }
 
+export interface SvgBadge {
+  type: string;
+  alt: string;
+}
+
+export interface Link {
+  link: string;
+  alt: string;
+}
+
 export interface Project {
   name: string;
   subtitle: string;
@@ -45,7 +55,7 @@ export interface Project {
   link: string;
   img: string;
   badges?: Link[];
-  technology?: Link[];
+  technology?: SvgBadge[];
 }
 
 export interface Skill {

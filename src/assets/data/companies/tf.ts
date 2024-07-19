@@ -1,4 +1,4 @@
-import { Company } from "../types";
+import { Company } from "../../../types/ResumeData";
 
 const company: Company = {
   name: "Trace First Inc.",

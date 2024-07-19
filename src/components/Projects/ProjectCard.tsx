@@ -1,12 +1,12 @@
 import HBLogo from "../../assets/homebridge-logo.avif";
-import WeddingLogo from "../../assets/wedding-site-logo.avif";
 import Portfolio from "../../assets/portfolio-site.avif";
 import Crowdle from "../../assets/crowdle-logo.avif";
 
-import { Project } from "../../assets/data/types";
-import { NewWindowIcon } from "../Global/Icons";
+import { Project } from "../../types/ResumeData";
+import { NewWindowIcon } from "../Global/Icon";
 import { Item } from "../Global/Tiles";
 import { log } from "../Global/Event";
+import { Shield } from "../Global/Shield";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const handleClick = (project: Project) => {
@@ -20,8 +20,6 @@ export default function ProjectCard({ project }: { project: Project }) {
     switch (img) {
       case "homebridge logo":
         return HBLogo;
-      case "wedding site splash page":
-        return WeddingLogo;
       case "portfolio site":
         return Portfolio;
       case "crowdle-logo":
@@ -50,7 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                   className="shandow-xl	my-auto ml-auto cursor-pointer rounded-xl border border-gray-700 bg-slate-200 p-3 hover:bg-slate-400"
                   onClick={() => handleClick(project)}
                 >
-                  <NewWindowIcon className="" width="30" height="30" />
+                  <NewWindowIcon width="30" height="30" />
                 </span>
               )}
             </div>
@@ -71,10 +69,10 @@ export default function ProjectCard({ project }: { project: Project }) {
             <div className="mt-4 flex flex-wrap">
               {project.technology &&
                 project.technology.map((badge, index) => (
-                  <img
-                    className="m-1 rounded-xl shadow-xl"
-                    src={badge.link}
+                  <Shield
+                    type={badge.type}
                     alt={badge.alt}
+                    className="m-1 rounded-xl shadow-xl"
                     key={index}
                   />
                 ))}

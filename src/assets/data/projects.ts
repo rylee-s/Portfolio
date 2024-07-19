@@ -1,4 +1,4 @@
-import { Project } from "./types";
+import { Project } from "../../types/ResumeData";
 
 const projects: Project[] = [
   {
@@ -10,35 +10,35 @@ const projects: Project[] = [
     img: "crowdle-logo",
     technology: [
       {
-        link: "https://img.shields.io/badge/Ruby%20on%20Rails-CC342D?logo=ruby",
+        type: "rails",
         alt: "Ruby on Rails",
       },
       {
-        link: "https://img.shields.io/badge/Hotwire-FFE801?logo=hotwire&logoColor=black",
+        type: "hotwire",
         alt: "Hotwire",
       },
       {
-        link: "https://img.shields.io/badge/Turbo-5CD8E5?logo=turbo&logoColor=white",
+        type: "turbo",
         alt: "Turbo.js",
       },
       {
-        link: "https://img.shields.io/badge/Heroku-430098?logo=heroku",
+        type: "heroku",
         alt: "Heroku",
       },
       {
-        link: "https://img.shields.io/badge/PostgreSql-4169E1?logo=PostgreSql&logoColor=white",
+        type: "postgresql",
         alt: "PostgreSql",
       },
       {
-        link: "https://img.shields.io/badge/Redis-DC382D?logo=Redis&logoColor=white",
+        type: "redis",
         alt: "Redis",
       },
       {
-        link: "https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white",
+        type: "tailwind",
         alt: "Tailwind CSS",
       },
       {
-        link: "https://img.shields.io/badge/Stimulus.js-FFC107?logo=stimulus&logoColor=black",
+        type: "stimulus",
         alt: "Stimulus.js",
       },
     ],
@@ -62,19 +62,19 @@ const projects: Project[] = [
     ],
     technology: [
       {
-        link: "https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white",
+        type: "node",
         alt: "Node.js",
       },
       {
-        link: "https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white",
+        type: "typescript",
         alt: "Typescript",
       },
       {
-        link: "https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white",
+        type: "axios",
         alt: "Axios",
       },
       {
-        link: "https://img.shields.io/badge/Homebridge%20API-491F59?logo=homebridge&logoColor=white",
+        type: "hbAPI",
         alt: "Homebrdige API",
       },
     ],
@@ -92,7 +92,7 @@ const projects: Project[] = [
         alt: "Lighthouse Performance",
       },
       {
-        link: "https://img.shields.io/badge/build-100%25-brightgreen?label=Lighthouse%20Accessibility",
+        link: "https://img.shields.io/badge/build-96%25-brightgreen?label=Lighthouse%20Accessibility",
         alt: "Lighthouse Accessibility",
       },
       {
@@ -100,25 +100,25 @@ const projects: Project[] = [
         alt: "Lighthouse Best Practices",
       },
       {
-        link: "https://img.shields.io/badge/build-90%25-green?label=Lighthouse%20SEO",
+        link: "https://img.shields.io/badge/build-91%25-green?label=Lighthouse%20SEO",
         alt: "Lighthouse SEO",
       },
     ],
     technology: [
       {
-        link: "https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black",
+        type: "react",
         alt: "React",
       },
       {
-        link: "https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white",
+        type: "tailwind",
         alt: "Tailwind CSS",
       },
       {
-        link: "https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white",
+        type: "typescript",
         alt: "Typescript",
       },
       {
-        link: "https://img.shields.io/badge/Github%20Actions-2088FF?logo=github%20actions&logoColor=white",
+        type: "ghActions",
         alt: "Github Actions",
       },
     ],

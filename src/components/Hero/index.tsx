@@ -1,7 +1,7 @@
 import Typewriter from "../../Typewriter";
 import Headshot from "../../assets/headshot.avif";
 import Resume from "../../assets/Rylee_Shearer_Resume.pdf";
-import { DocumentIcon, GitHubIcon, LinkedInIcon } from "../Global/Icons";
+import { DocumentIcon, GitHubIcon, LinkedInIcon } from "../Global/Icon";
 
 export default function Hero({
   typeWriterData,
@@ -75,7 +75,7 @@ export default function Hero({
             <img
               src={Headshot}
               alt="Headshot Image"
-              rel="preload"
+              rel="prefetch"
               className="m-auto max-h-96 rounded-3xl object-cover"
             />
           </div>
