@@ -14,7 +14,7 @@ const company: Company = {
       bullets: [
         "Conducted review of unresolved support issues, gathering information to create detailed development tickets in an agile development environment",
         "Applied a combination of manual and automated testing techniques to rigorously evaluate feature updates and bug fixes, ensuring compliance with company standards for usability, accessibility, and functionality requirements",
-        "Designed and managed automated testing scripts using Selenium and other cutting-edge automated testing tools, ensuring robust and efficient testing processes for software development lifestyle",
+        "Designed and managed automated testing scripts using Selenium and other automated testing tools, ensuring robust and efficient testing processes within the software development life cycle",
         "Fulfilled requests for custom reports by creating reusable SQL queries to meet the specific needs of clients and internal teams to enhance data-driven decision-making and gather data for regulatory reporting without affecting system performance",
       ],
       skills: [

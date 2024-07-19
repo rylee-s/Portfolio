@@ -4,6 +4,10 @@ import { Position } from "../../types/ResumeData";
 import { Duration } from "../Global/Label";
 
 export default function PositionSection({ position }: { position: Position }) {
+  const today = new Date().toLocaleString("default", {
+    month: "long",
+    year: "numeric",
+  });
   return (
     <div className="flex-start">
       <div className="my-2 last:mb-0 lg:my-6">
@@ -17,7 +21,10 @@ export default function PositionSection({ position }: { position: Position }) {
               <div className="font-medium">
                 <span className="flex font-medium text-slate-600 transition duration-300 ease-in-out hover:text-slate-700 focus:text-slate-800">
                   <CalendarHeartIcon className="my-auto mr-1" />
-                  {position.dates.start} - {position.dates.end}
+                  {position.dates.start} -{" "}
+                  {position.dates.end === today
+                    ? "Present"
+                    : position.dates.end}
                 </span>
                 <Duration duration={position.dates.duration} />
               </div>

@@ -123,13 +123,13 @@ const company: Company = {
       startDate: "08/01/2022",
       endDate: "07/01/2023",
       bullets: [
-        "Adhered to client guidelines and contract specifications to successfully design and maintain a single tenant LIMS system, optimizing the process of lab testing from sample receipt through final report generation and billing",
-        "Played a key role in expanding the application user base from solely animal health laboratories to agricultural, environmental, and public health laboratories",
-        "Scaled and redesigned the file processing and storage of 19+ TB of client data to improve application performance",
-        "Created and managed analytics modules, handling diverse datasets such as time series, revenue, KPI, and geographical data, derived from millions of rows of client data",
-        "Successfully optimized various app pages, significantly reducing instances of load time violations and enhancing overall performance",
-        "Assisted with quarterly releases for 19 applications and 8 clients based across North America",
-        "Led the development of an offline native application for a state government to allow input, processing, and secure upload of field data for license and permit compliance",
+        "Adhered to client guidelines and contract specifications to design and maintain multiple single-tenant LIMS systems, optimizing lab testing processes from sample receipt through to final report generation and billing",
+        "Played a key role in expanding the application user base from solely animal health laboratories to include agricultural, environmental, and public health laboratories",
+        "Scaled and redesigned file processing and storage for over 19 TB of client data, improving application performance",
+        "Created and managed analytics modules to handle diverse datasets such as time series, revenue, KPIs, and geographical data derived from millions of rows of client data",
+        "Optimized various application pages, significantly reducing load time violations while enhancing overall performance",
+        "Assisted with quarterly releases for 19 applications and 8 clients across North America",
+        "Led the development of an offline native application for a state government, enabling the input, processing, and secure upload of field data for license and permit compliance",
       ],
       skills: [
         {
@@ -146,11 +146,11 @@ const company: Company = {
           skills: [
             {
               label: "Express JS",
-              level: 98,
+              level: 86,
             },
             {
               label: "Electron",
-              level: 85,
+              level: 87,
             },
           ],
         },

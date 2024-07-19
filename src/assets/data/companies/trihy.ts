@@ -11,8 +11,10 @@ const company: Company = {
       description: "",
       startDate: "02/01/2024",
       bullets: [
-        "Collaborated within a cross-functional team to efficiently address and resolve customer issues spanning multiple bank products, demonstrating a versatile and comprehensive approach to operational support",
-        "Acted as a subject matter expert, providing guidance on complex customer issues and collaborating with relevant departments to implement solutions",
+        "Work on projects related to federal connected vehicle programs with various State Departments of Transportation (DOTs), ensuring alignment with guidelines and specifications",
+        "Manage and resolve tickets for bug fixes and feature requests",
+        "Utilize .NET, C#, C++, and Java within Azure and client-hosted environments, applying knowledge of techniques like dependency injection to optimize application performance",
+        "Employ Agile and Scrum methodologies to manage development processes to ensure timely and efficient project delivery",
       ],
       skills: [
         {
@@ -20,7 +22,7 @@ const company: Company = {
           skills: [
             {
               label: "C#",
-              level: 90,
+              level: 89,
             },
             {
               label: "JavaScript",
@@ -36,7 +38,7 @@ const company: Company = {
             },
             {
               label: "SQL",
-              level: 89,
+              level: 88,
             },
           ],
         },
@@ -45,19 +47,19 @@ const company: Company = {
           skills: [
             {
               label: ".NET",
-              level: 93,
+              level: 90,
             },
             {
               label: "Entity Framework",
-              level: 79,
+              level: 89,
             },
             {
               label: "Asp .NET",
-              level: 92,
+              level: 90,
             },
             {
               label: "Docker",
-              level: 98,
+              level: 89,
             },
           ],
         },
@@ -66,11 +68,11 @@ const company: Company = {
           skills: [
             {
               label: "Microsoft SQL Server",
-              level: 95,
+              level: 89,
             },
             {
               label: "Relational Databases",
-              level: 89,
+              level: 92,
             },
             {
               label: "Document Databases",
@@ -78,7 +80,7 @@ const company: Company = {
             },
             {
               label: "PostgreSQL",
-              level: 85,
+              level: 90,
             },
           ],
         },
@@ -87,23 +89,23 @@ const company: Company = {
           skills: [
             {
               label: "Azure Functions",
-              level: 89,
+              level: 87,
             },
             {
               label: "Azure App Service",
-              level: 97,
+              level: 90,
             },
             {
               label: "Azure Application Insights",
-              level: 92,
+              level: 90,
             },
             {
               label: "Azure",
-              level: 92,
+              level: 85,
             },
             {
               label: "Azure Cosmos DB",
-              level: 85,
+              level: 83,
             },
           ],
         },
@@ -120,7 +122,7 @@ const company: Company = {
             },
             {
               label: "Agile Development",
-              level: 87,
+              level: 91,
             },
             {
               label: "MVC (Model, View, Controller)",
