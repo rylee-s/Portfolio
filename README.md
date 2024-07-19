@@ -4,11 +4,4 @@ This portfolio serves as a digital showcase of my skills, experiences, and proje
 
 ## Description
 
-This is a react app styled by hand using tailwind-css to be mobile friendly and pass Lighthouse tests with flying colors. The data for the site is stored in a json file to allow for easy updates. 
-
-## Getting Started
-
-### Production Dependencies
-
-* React
-* React-dom
+This is a react app styled by hand using tailwind-css to be mobile friendly and pass Lighthouse tests with flying colors. The data for the site is stored in typed JS objects to allow for easy updates. 
