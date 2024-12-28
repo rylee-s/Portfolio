@@ -6,7 +6,7 @@ const projects: Project[] = [
     subtitle: "Wordle With Friends!",
     description:
       "This game is a multiplayer version of the popular word game Wordle. It is built using Ruby on Rails and the Hotwire frameworks. Crowdle uses Action Cable for real-time communication between players using WebSocket's. The game is hosted on hosted on Heroku with a Postgres Database and Redis for caching in-progress game state. The front end is styled by hand using Tailwind CSS and uses Stimulus.js for interactivity.",
-    link: "https://crowdle-7157641dfb64.herokuapp.com/",
+    link: "https://crowdle.rylee.dev",
     img: "crowdle-logo",
     technology: [
       {
