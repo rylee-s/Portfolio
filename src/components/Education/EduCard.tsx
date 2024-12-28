@@ -1,5 +1,5 @@
 import awsCPLogo from "../../assets/aws-certified-cloud-practitioner.avif";
-import gaLogo from "../../assets/ga_Logo.avif";
+import gaLogo from "../../assets/ga_logo.avif";
 import payrollLogo from "../../assets/payrollorg-logo.avif";
 import csuLogo from "../../assets/csu-global-logo.avif";
 import { Education } from "../../types/ResumeData";
