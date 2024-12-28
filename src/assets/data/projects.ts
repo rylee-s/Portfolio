@@ -2,12 +2,12 @@ import { Project } from "../../types/ResumeData";
 
 const projects: Project[] = [
   {
-    name: "Crowdle",
-    subtitle: "Wordle With Friends!",
+    name: "Bread Box (WIP)",
+    subtitle: "Recipe Manager",
     description:
-      "This game is a multiplayer version of the popular word game Wordle. It is built using Ruby on Rails and the Hotwire frameworks. Crowdle uses Action Cable for real-time communication between players using WebSocket's. The game is hosted on hosted on Heroku with a Postgres Database and Redis for caching in-progress game state. The front end is styled by hand using Tailwind CSS and uses Stimulus.js for interactivity.",
-    link: "https://crowdle.rylee.dev",
-    img: "crowdle-logo",
+      "BreadBox is a recipe management and grocery list app designed to make cooking and shopping effortless. Built with Ruby on Rails and styled using Tailwind CSS, BreadBox simplifies meal prep by combining ingredients from all your recipes into a single, streamlined shopping list. The app supports real-time updates using Rails Action Cable, ensuring seamless sharing of recipes and lists with friends and family. Nutritional insights, customizable categories, and portion control features make it a versatile tool for any home chef. BreadBox is self-hosted and backed by a PostgreSQL database, ensuring reliable and efficient performance.",
+    link: "https://bread-box.rylee.dev",
+    img: "bread-box",
     technology: [
       {
         type: "rails",
@@ -22,8 +22,42 @@ const projects: Project[] = [
         alt: "Turbo.js",
       },
       {
-        type: "heroku",
-        alt: "Heroku",
+        type: "postgresql",
+        alt: "PostgreSql",
+      },
+      {
+        type: "redis",
+        alt: "Redis",
+      },
+      {
+        type: "tailwind",
+        alt: "Tailwind CSS",
+      },
+      {
+        type: "stimulus",
+        alt: "Stimulus.js",
+      },
+    ],
+  },
+  {
+    name: "Crowdle",
+    subtitle: "Wordle With Friends!",
+    description:
+      "This game is a multiplayer version of the popular word game Wordle. It is built using Ruby on Rails and the Hotwire frameworks. Crowdle uses Action Cable for real-time communication between players using WebSocket's. The game is self hosted with a Postgres Database and Redis for caching in-progress game state. The front end is styled by hand using Tailwind CSS and uses Stimulus.js for interactivity.",
+    link: "https://crowdle.rylee.dev",
+    img: "crowdle-logo",
+    technology: [
+      {
+        type: "rails",
+        alt: "Ruby on Rails",
+      },
+      {
+        type: "hotwire",
+        alt: "Hotwire",
+      },
+      {
+        type: "turbo",
+        alt: "Turbo.js",
       },
       {
         type: "postgresql",
@@ -83,7 +117,7 @@ const projects: Project[] = [
     name: "Portfolio Site",
     subtitle: "This Site!",
     description:
-      "This site is an SPA written in react using tailwind css for styling. I have the site data stored in a JSON document to allow for easy updates and changes. The site is hosted on Github Pages and uses Github Actions to automatically build and deploy on push to the main branch.",
+      "This site is an SPA written in react using tailwind css for styling. I have the site data stored in a JSON document to allow for easy updates and changes. The site is self hosted.",
     link: "https://github.com/rylee-s/Portfolio",
     img: "portfolio site",
     badges: [
@@ -116,10 +150,6 @@ const projects: Project[] = [
       {
         type: "typescript",
         alt: "Typescript",
-      },
-      {
-        type: "ghActions",
-        alt: "Github Actions",
       },
     ],
   },

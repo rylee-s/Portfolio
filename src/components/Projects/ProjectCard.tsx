@@ -1,6 +1,7 @@
 import HBLogo from "../../assets/homebridge-logo.avif";
 import Portfolio from "../../assets/portfolio-site.avif";
 import Crowdle from "../../assets/crowdle-logo.avif";
+import BreadBox from "../../assets/bread-box.png";
 
 import { Project } from "../../types/ResumeData";
 import { NewWindowIcon } from "../Global/Icon";
@@ -24,6 +25,8 @@ export default function ProjectCard({ project }: { project: Project }) {
         return Portfolio;
       case "crowdle-logo":
         return Crowdle;
+      case "bread-box":
+        return BreadBox;
       default:
         return HBLogo;
     }
